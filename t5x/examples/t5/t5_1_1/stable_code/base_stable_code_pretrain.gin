@@ -1,0 +1,14 @@
+# ${HOME}/dir1/user_dir/t5_1_1_base_de_en.gin
+from __gin__ import dynamic_registration
+import tasks  # This imports the task defined in dir1/user_dir/tasks.py.
+import __main__ as train_script
+
+include 't5x/examples/t5/t5_1_1/base.gin'
+include 't5x/configs/runs/pretrain.gin'
+
+USE_CACHED_TASKS = False
+MIXTURE_OR_TASK_NAME = "stable_code_mixture"
+TASK_FEATURE_LENGTHS = {"inputs": 512, "targets": 512}
+TRAIN_STEPS = 100000
+DROPOUT_RATE = 0.0
+BATCH_SIZE = 128
