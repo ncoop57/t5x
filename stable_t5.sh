@@ -9,6 +9,6 @@ T5X_DIR="/home/natha/t5x"  # directory where the T5X repo is cloned.
 
 python3 ${T5X_DIR}/t5x/train.py \
   --gin_search_paths=${PROJECT_DIR} \
-  --gin_file=t5x/examples/t5/t5_1_1/stable_t5/base_stable_t5_pretrain.gin \
+  --gin_file=t5x/examples/scalable_t5/t5_1_1/stable_t5/base_stable_t5_pretrain.gin \
   --gin.MODEL_DIR=\"${MODEL_DIR}\" \
   --tfds_data_dir=${TFDS_DATA_DIR}
