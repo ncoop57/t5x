@@ -66,7 +66,8 @@ tfds_names = [
 ]
 task_names = []
 for name in tfds_names:
-    task_name = f"c4_v220_span_corruption_{name.split('/')[1].split(':')[0]}"
+    task_name = f"c4_v220_span_corruption_{name.split('/')[1].split(':')[0].replace('-', '_')}"
+    task_names.append(task_name)
     seqio.TaskRegistry.add(
         task_name,
         source=seqio.TfdsDataSource(tfds_name=name),
