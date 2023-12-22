@@ -4,7 +4,7 @@ TFDS_DATA_DIR="gs://v5_path/"
 
 # Model dir to save logs, ckpts, etc. in "gs://model_dir" format.
 MODEL_DIR="gs://improved-t5/t5x/stable_t5"
-T5X_DIR="/home/natha/t5x"  # directory where the T5X repo is cloned.
+T5X_DIR="/home/natha/stable_t5x"  # directory where the T5X repo is cloned.
 # # TFDS_DATA_DIR="..."
 PROJECT_DIR="/home/natha/stable_t5x/t5x/examples/scalable_t5/t5_1_1/stable_t5"
 export PYTHONPATH=${PROJECT_DIR}:${PYTHONPATH}
