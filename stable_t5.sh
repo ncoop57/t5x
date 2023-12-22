@@ -6,7 +6,7 @@ TFDS_DATA_DIR="gs://v5_path/"
 MODEL_DIR="gs://improved-t5/t5x/stable_t5"
 T5X_DIR="/home/natha/t5x"  # directory where the T5X repo is cloned.
 # # TFDS_DATA_DIR="..."
-PROJECT_DIR="/home/natha/t5x/t5x/examples/scalable_t5/t5_1_1/stable_t5"
+PROJECT_DIR="/home/natha/stable_t5x/t5x/examples/scalable_t5/t5_1_1/stable_t5"
 export PYTHONPATH=${PROJECT_DIR}:${PYTHONPATH}
 
 python3 ${T5X_DIR}/t5x/train.py \
