@@ -14,7 +14,7 @@ MIXTURE_OR_TASK_NAME = "stable_t5_mixture"
 TASK_FEATURE_LENGTHS = {"inputs": 2048, "targets": 512}
 TRAIN_STEPS = 100000
 DROPOUT_RATE = 0.0
-BATCH_SIZE = 1024
+BATCH_SIZE = 512
 USE_CACHED_TASKS = False
 
 train_script.train:
