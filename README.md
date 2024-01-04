@@ -110,7 +110,7 @@ the TPU VM instance unless otherwise stated.
 4.  Install T5X and the dependencies.
 
     ```sh
-    git clone --branch=main https://github.com/google-research/t5x
+    git clone --branch=main https://github.com/ncoop57/t5x
     cd t5x
 
     python3 -m pip install -e '.[tpu]' -f \
@@ -523,3 +523,30 @@ This is not an officially supported Google product
 [t5_paper]: https://arxiv.org/abs/1910.10683
 [t5_github]: https://github.com/google-research/text-to-text-transfer-transformer
 [gin-primer]: docs/usage/gin.md
+
+
+```sh
+git clone --branch=main https://github.com/ncoop57/t5x
+cd t5x
+
+python3 -m pip install -e '.[tpu]' -f https://storage.googleapis.com/jax-releases/libtpu_releases.html
+
+```
+
+gcloud alpha compute tpus tpu-vm ssh stable-t5x-test \
+  --zone us-central2-b \
+  --worker=all \
+  --command="git clone --branch=main https://github.com/ncoop57/t5x && cd t5x && python3 -m pip install -e '.[tpu]' -f https://storage.googleapis.com/jax-releases/libtpu_releases.html"
+
+
+gcloud alpha compute tpus tpu-vm ssh stable-t5x-test --zone us-central2-b --worker=all --command="git clone --branch=main https://github.com/ncoop57/t5x stable_t5 && cd stable_t5 && python3 -m pip install -e '.[tpu]' -f https://storage.googleapis.com/jax-releases/libtpu_releases.html"
+
+gcloud alpha compute tpus tpu-vm ssh stable-t5x-test --zone us-central2-b \
+  --worker=all \
+  --command="export PATH="/home/natha/.local/bin:$PATH" && cd stable_t5 && git pull && bash ./stable_t5.sh"
+
+
+gcloud alpha compute tpus tpu-vm ssh stable-t5x-test \
+  --zone us-central2-b \
+  --worker=all \
+  --command="sudo lsof -t /dev/accel0 | xargs kill -9"
