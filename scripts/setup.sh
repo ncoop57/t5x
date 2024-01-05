@@ -41,6 +41,7 @@ python -m pip install datasets
 # Install T5x
 git clone --branch=main https://github.com/ncoop57/t5x.git stable_t5
 pushd stable_t5
+git pull
 python -m pip install -e '.[tpu]' -f \
   https://storage.googleapis.com/jax-releases/libtpu_releases.html
 popd
