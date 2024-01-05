@@ -1,4 +1,4 @@
-POD_NAME="stable-t5x-test"
+POD_NAME="stable-t5x"
 
 bash send.sh $POD_NAME setup.sh
 bash run.sh $POD_NAME "bash setup.sh"
