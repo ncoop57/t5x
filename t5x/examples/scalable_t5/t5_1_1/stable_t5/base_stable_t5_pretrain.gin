@@ -11,7 +11,7 @@ include 't5x/configs/runs/pretrain.gin'
 
 
 MIXTURE_OR_TASK_NAME = "stable_t5_mixture"
-TASK_FEATURE_LENGTHS = {"inputs": 2048, "targets": 455}
+TASK_FEATURE_LENGTHS = {"inputs": 2048, "targets": 456}
 TRAIN_STEPS = 1000000
 DROPOUT_RATE = 0.0
 BATCH_SIZE = 512
